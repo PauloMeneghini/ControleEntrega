@@ -32,7 +32,6 @@
             </div>
 
             <button name="enviaPesquisa" type="submit">Pesquisar</button>
-            <input type="date" name="data" id="data">
         </div>
     </form><br><br>
 
@@ -55,26 +54,11 @@
                     <tr>
                         <td><img src="imagens/<?php echo $row_codEnvelope['imagem'] ?>" class='imagem'></td>
                     </tr>
-                </table>
-
-                <?php 
-                $data = $_POST['data'];
-                echo "Data: " . $data. ""; ?>
-                <button onclick="imprimir()">Imprimir</button> <?php
+                </table> <?php
                 
             }
         }
 
     ?>
-
-    <!-- Gera a pagina de impressão -->
-    <script>
-        function imprimir(){
-            window.print();
-        }
-
-    </script>
-
-
 </body>
 </html>
