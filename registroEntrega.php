@@ -49,12 +49,9 @@
                         <td>Empresa: <?php echo $row_codEnvelope['nomeEmpresa'] ?></td>
                     </tr>
                     <tr>
-                        <td>Recebidor: <?php echo $row_codEnvelope['recebidor'] ?></td>
-                    </tr>
-                    <tr>
                         <td><a href="editaRegistro.php?id=<?php echo $row_codEnvelope['id']; ?>"><button>Registrar entrega</button></a></td>
                     </tr>
-                </table> <?php
+                </table><?php
             }
         }
 

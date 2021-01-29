@@ -17,7 +17,7 @@
 <body>
 
     <form action="validarEditaRegistro.php" method="POST" enctype="multipart/form-data">
-        <div class="container">
+        <div class="container" style="height: 500px">
             <input type="hidden" name="id" value="<?php echo $row_codEnvelope['id']; ?>" readonly>
 
             <div class="dados">
@@ -42,7 +42,7 @@
             </div>
 
             
-            <label>Canhoto assinado: </label>
+            <label for="imagem">Canhoto assinado: </label>
             <input type="file" name="imagem" id="imagem">
             
             <button type="submit">Editar</button>
