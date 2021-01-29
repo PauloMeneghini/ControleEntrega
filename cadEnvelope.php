@@ -8,8 +8,10 @@
         } else {
             $nomeEmpresa = $_POST['nomeEmpresa'];
             $codEnvelope = $_POST['codEnvelope'];
+            $qtdeCartao = $_POST['qtdeCartao'];
+            $cidade = $_POST['cidade'];
 
-            $sql = "INSERT INTO controlecartao (nomeEmpresa, codEnvelope, dataCadastro) VALUES ('$nomeEmpresa', '$codEnvelope', NOW())";
+            $sql = "INSERT INTO controlecartao (nomeEmpresa, codEnvelope, qtdeCartao, cidade, dataCadastro) VALUES ('$nomeEmpresa', '$codEnvelope', '$qtdeCartao', '$cidade', NOW())";
             $insert = mysqli_query($conn, $sql);
 
             if($insert){
@@ -33,7 +35,7 @@
     <body>
 
         <form action="cadEnvelope.php" method="POST">
-            <div class="container">
+            <div class="container" style="height: 550px">
                 <div class="formulario">
                     <input type="text" name="nomeEmpresa" autocomplete="off" required>
                     <label for="nomeEmpresa" class="label-name">
@@ -45,6 +47,20 @@
                     <input type="number" name="codEnvelope" autocomplete="off" required>
                     <label for="codEnvelope" class="label-name">
                         <span class="content-name">Código do envelope: </span>
+                    </label>
+                </div>
+
+                <div class="formulario">
+                    <input type="text" name="cidade" autocomplete="off" required>
+                    <label for="cidade" class="label-name">
+                        <span class="content-name">Cidade: </span>
+                    </label>
+                </div>
+                
+                <div class="formulario">
+                    <input type="number" name="qtdeCartao" autocomplete="off" required>
+                    <label for="qtdeCartao" class="label-name">
+                        <span class="content-name">Quantidade de cartão no envelope</span>
                     </label>
                 </div>
 

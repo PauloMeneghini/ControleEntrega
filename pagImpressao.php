@@ -11,12 +11,6 @@
     <title>Impressão</title>
 </head>
 <body>
-    <div class="container">
-        <form action="" method="post">
-            <input type="date" name="data"><br><br>
-            <button name="enviaPesquisa" type="submit">Pesquisar</button>
-        </form>
-    </div>
 
     <?php
         if(isset($_POST['enviaPesquisa'])){
@@ -25,18 +19,23 @@
             $resultado_consulta = mysqli_query($conn, $result_consulta);
             while($row_consulta = mysqli_fetch_assoc($resultado_consulta)){ ?>
 
-                <table style="border: 2px solid black">
-                    <tr>
-                        <td><?php echo "Fantasia/Razão: " .$row_consulta['nomeEmpresa']; ?></td>
-                    </tr>
-                    <tr>
-                        <td><?php echo "Cidade: " .$row_consulta['cidade']; ?></td>
-                    </tr>
-                </table>
-                
-                <button onclick="imprimir()">Imprimir</button> <?php
-
-            }
+                <div class="container-resultado">
+                    <div class="teste-resultado">
+                        <div><?php echo "Fantasia/Razão: " .$row_consulta['nomeEmpresa']; ?></div>
+                        <div class="teste">
+                            <div><?php echo "Cidade: " .$row_consulta['cidade']; ?></div>
+                            <div>Data: __/__/____</div>
+                            <div>Prev. de entrega: __/__/____</div>
+                        </div>
+                        <div class="teste2">
+                            <div>Assinatura (por extenso):</div>
+                            <div><?php echo $row_consulta['codEnvelope'] ?></div>
+                            <div><?php echo $row_consulta['qtdeCartao'] ?></div>
+                        </div>
+                    </div>
+                </div> <?php
+            } ?>
+            <button onclick="imprimir()">Imprimir</button> <?php
         }
     ?>
 

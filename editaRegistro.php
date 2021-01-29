@@ -41,7 +41,6 @@
                 </label>
             </div>
 
-            
             <label for="imagem">Canhoto assinado: </label>
             <input type="file" name="imagem" id="imagem">
             
