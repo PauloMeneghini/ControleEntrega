@@ -131,17 +131,17 @@ form{
     height: 384px;
 }
 .container-resultado{
-    width: 29.7cm;
-    padding-left: 40px;
-    padding-right: 40px;
-    background-color: lightblue;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
 }
 .teste-resultado{
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    margin-top: 30px;
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 10px;
     width: 100%;
     border: 2px solid black;
     font-size: 12px;
@@ -151,7 +151,7 @@ form{
 }
 .teste{
     display: grid;
-    grid-template-columns: 30% 30% 40%;
+    grid-template-columns: 35% 25% 40%;
 }
 .teste2{
     display: grid;
@@ -160,4 +160,12 @@ form{
 .impressao{
     margin: 10px;
     border: 2px solid black;
+}
+@page{
+    width: 29.7cm;
+    height: 21cm;
+  }
+.page {
+    width: 29.7cm;
+    height: 21cm;
 }
